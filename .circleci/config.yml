@@ -30,7 +30,7 @@ jobs:
           command: |
             docker build -t matrix-image:latest .
             docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD 
-            docker push matrix-image:latest
+            docker push $DOCKERHUB_USERNAME/matrix-image:latest
  
 workflows:
   version: 2
