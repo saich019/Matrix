@@ -20,6 +20,10 @@ jobs:
           command: |
             pytest test_sparse_recommender.py # Adjust based on your project structure and testing framework
 
+      # Start Docker daemon
+      - setup_remote_docker:
+          version: 20.10.8
+
       # Build Docker image upon successful tests
       - run:
           name: Build Docker image
