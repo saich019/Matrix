@@ -22,7 +22,7 @@ jobs:
 
       # Start Docker daemon
       - setup_remote_docker:
-          version: 20.10.8
+          version: 19.03.13
 
       # Build Docker image upon successful tests
       - run:
