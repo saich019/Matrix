@@ -28,7 +28,7 @@ jobs:
       - run:
           name: Build Docker image
           command: |
-            docker build -t matrix-image:latest .
+            docker build -t $DOCKERHUB_USERNAME/matrix-image:latest .
             docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD 
             docker push $DOCKERHUB_USERNAME/matrix-image:latest
  
